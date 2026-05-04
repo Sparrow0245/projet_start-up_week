@@ -1,0 +1,707 @@
+{
+  "common": {
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "retry": "Réessayer"
+  },
+  "nav": {
+    "home": "Accueil",
+    "exercises": "Exercices",
+    "program": "Programme",
+    "subscription": "Abonnement",
+    "progression": "Progression",
+    "logout": "Se déconnecter",
+    "contact": "Nous contacter",
+    "profile": "Profil",
+    "admin": "Admin",
+    "contests": "Concours"
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "noAccount": "Pas encore de compte ?",
+    "signupLink": "S'inscrire",
+    "forgotPassword": "Mot de passe oublié ?",
+    "emailNotVerifiedTitle": "Email non vérifié",
+    "emailNotVerifiedDescription": "Vous devez vérifier votre adresse email avant de vous connecter.",
+    "emailNotVerifiedLink": "Renvoyer ou vérifier mon email"
+  },
+  "signup": {
+    "title": "Inscription",
+    "name": "Prénom",
+    "surname": "Nom",
+    "email": "Email",
+    "password": "Mot de passe",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "submit": "S'inscrire",
+    "alreadyAccount": "Déjà un compte ?",
+    "loginLink": "Se connecter",
+    "isCoach": "Je suis un coach sportif",
+    "consent": "J'accepte les <1>conditions d'utilisation</1> et la <3>politique de confidentialité</3>, y compris le traitement de mes données de santé."
+  },
+  "session": {
+    "level": "Niveau ...",
+    "title": "Séance",
+    "duration": "Durée estimée :",
+    "minutes": "minutes",
+    "materials": "Matériel nécessaire :",
+    "exerciseCount": "Nombre d'exercices :",
+    "noEquipment": "Aucun matériel requis",
+    "exercise": "Exercice",
+    "start": "Démarrer la séance",
+    "back": "Retour"
+  },
+  "workout": {
+    "back": "Retour",
+    "noSession": "Séance introuvable",
+    "backToProgram": "Retour au programme",
+    "series": "Séries",
+    "reps": "Répétitions",
+    "duration": "Durée",
+    "weight": "Poids",
+    "equipment": "Matériel nécessaire",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "finishing": "Enregistrement...",
+    "completeError": "Erreur lors de l'enregistrement de la séance. Réessayez.",
+    "rest": {
+      "title": "Temps de repos",
+      "subtitle": "Récupère avant le prochain exercice",
+      "nextUp": "Exercice suivant",
+      "skip": "Passer le repos"
+    },
+    "finished": {
+      "title": "Séance terminée !",
+      "description": "Bravo, tu as terminé les {{count}} exercices de ta séance.",
+      "xpGained": "XP gagnée",
+      "cta": "Retour au programme"
+    },
+    "levelUp": {
+      "title": "Niveau {{level}} atteint",
+      "contestsUnlocked": "Concours débloqué :"
+    },
+    "voice": {
+      "enable": "Activer la voix",
+      "disable": "Désactiver la voix",
+      "exerciseAnnounce": "Exercice suivant : {{name}}. {{series}} séries de {{reps}}.",
+      "restAnnounce": "Repos. {{seconds}} secondes.",
+      "restEnd": "C'est parti !",
+      "finishAnnounce": "Séance terminée, bravo !",
+      "firstExercise": "Début de séance. Premier exercice : {{name}}. {{series}} séries de {{reps}}."
+    }
+  },
+  "subscription": {
+    "subtitle": "Abonnement",
+    "title": "Choisissez votre plan",
+    "description": "Commencez gratuitement ou débloquez tout le potentiel de Level Up avec Premium.",
+    "forever": "Pour toujours",
+    "month": "mois",
+    "popular": "Populaire",
+    "legal": "Vous pouvez annuler votre abonnement à tout moment. Aucun engagement.",
+    "free": {
+      "name": "Gratuit",
+      "tagline": "Pour découvrir Level Up",
+      "cta": "Commencer gratuitement"
+    },
+    "premium": {
+      "name": "Premium",
+      "tagline": "Coaching complet",
+      "cta": "Passer à Premium"
+    },
+    "features": {
+      "basicProgram": "Programme de base",
+      "exerciseLibrary": "Bibliothèque d'exercices",
+      "progressTracking": "Suivi de progression",
+      "customProgram": "Programme personnalisé",
+      "voiceCoaching": "Coaching vocal IA",
+      "postureAnalysis": "Analyse de posture",
+      "physicalTests": "Tests physiques",
+      "prioritySupport": "Support prioritaire"
+    }
+  },
+  "home": {
+    "greeting": "Bonjour {{name}}",
+    "greetingDefault": "Bonjour",
+    "stats": {
+      "weekSessions": "Séances / sem.",
+      "totalExercises": "Exercices / sem.",
+      "totalMinutes": "Minutes totales / sem."
+    },
+    "nextSession": {
+      "label": "Prochaine séance",
+      "session": "Séance",
+      "exercises": "exercices",
+      "allDone": "Toutes les séances sont terminées !",
+      "allDoneDesc": "Bravo, reviens la semaine prochaine pour continuer."
+    },
+    "noProgram": {
+      "description": "Tu n'as pas encore de programme. Remplis le questionnaire pour commencer !",
+      "cta": "Créer mon programme"
+    },
+    "program": {
+      "title": "Mon programme",
+      "description": "Retrouve tes séances et ton programme personnalisé."
+    },
+    "exercises": {
+      "title": "Bibliothèque d'exercices",
+      "description": "Parcours tous les exercices disponibles."
+    },
+    "progression": {
+      "title": "Ma progression",
+      "description": "Suis tes performances et objectifs."
+    }
+  },
+  "payment": {
+    "subtitle": "Paiement",
+    "title": "Finaliser l'abonnement",
+    "recurring": "Facturation mensuelle",
+    "cardInfo": "Informations de paiement",
+    "cardName": "Nom sur la carte",
+    "cardNumber": "Numéro de carte",
+    "expiry": "Expiration",
+    "cvv": "CVV",
+    "cta": "Payer 9.99€",
+    "processing": "Traitement en cours...",
+    "securedBy": "Paiement sécurisé SSL",
+    "guarantee": "Satisfait ou remboursé pendant 14 jours",
+    "success": {
+      "title": "Bienvenue dans Premium !",
+      "message": "Votre abonnement est activé. Profitez de toutes les fonctionnalités de Level Up.",
+      "plan": "Abonnement",
+      "amount": "Montant",
+      "date": "Date",
+      "cta": "Commencer l'entraînement"
+    }
+  },
+  "mySubscription": {
+    "subtitle": "Mon compte",
+    "title": "Mon abonnement",
+    "plan": "Abonnement actuel",
+    "month": "mois",
+    "startDate": "Abonné depuis le",
+    "nextPayment": "Prochain paiement",
+    "cardEnding": "Carte se terminant par",
+    "changePlan": "Changer d'abonnement",
+    "changePlanDesc": "Passer au plan gratuit ou modifier votre formule.",
+    "cancel": "Résilier mon abonnement",
+    "cancelled": "Abonnement résilié",
+    "cancelledDesc": "Votre abonnement reste actif jusqu'à la fin de la période en cours.",
+    "back": "Retour",
+    "cancelModal": {
+      "title": "Résilier l'abonnement ?",
+      "message": "Vous perdrez l'accès aux fonctionnalités Premium à la fin de votre période en cours.",
+      "keep": "Garder",
+      "confirm": "Résilier"
+    }
+  },
+  "exerciseLibrary": {
+    "subtitle": "Base de données",
+    "title": "Exercices disponibles",
+    "searchPlaceholder": "Rechercher un exercice...",
+    "noResults": "Aucun exercice trouvé",
+    "total": "{{count}} exercices disponibles",
+    "filtered": "{{count}} résultats sur {{total}} exercices",
+    "loading": "Chargement...",
+    "allSports": "Tous les sports",
+    "clearFilters": "Réinitialiser",
+    "myExercises": "Mes exercices",
+    "loadError": "Impossible de charger les exercices.",
+    "deleteError": "Erreur lors de la suppression. Réessayez.",
+    "intensity": {
+      "FAIBLE": "Faible",
+      "MOYENNE": "Moyenne",
+      "ELEVEE": "Élevée"
+    }
+  },
+  "profile": {
+    "loading": "Chargement du profil...",
+    "loadError": "Impossible de charger le profil. Vérifiez votre connexion.",
+    "stats": {
+      "sessions": "Séances totales",
+      "streak": "Jours d'affilée"
+    },
+    "info": {
+      "title": "Informations",
+      "memberSince": "Membre depuis {{date}}",
+      "equipment": "Matériel possédé",
+      "injuries": "Contraintes physiques",
+      "noInjury": "Aucune"
+    },
+    "actions": {
+      "editSport": "Nouveau programme",
+      "subscription": "Mon abonnement",
+      "logout": "Se déconnecter"
+    }
+  },
+    "questionnaire": {
+    "placeholder": "Sélectionner une option",
+    "next": "Suivant",
+    "back": "Retour",
+    "submit": "Générer",
+    "loading": "Génération en cours...",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "loadError": "Impossible de charger les données. Vérifiez votre connexion.",
+    "sessionLabel": "séance",
+    "sessionsLabel": "séances",
+    "step": {
+      "sport": "Sport et profil",
+      "constraints": "Contraintes physiques",
+      "equipment": "Matériel disponible",
+      "goals": "Objectifs d'entraînement"
+    },
+    "general": {
+      "title": "Informations générales",
+      "mainSport": "Quel est ton sport principal ?",
+      "position": "Quel est ton poste / rôle ?",
+      "sessions": "Combien de séances par semaine ?",
+      "duration": "Durée du programme"
+    },
+    "duration": {
+      "short": "Courte (2 mois)",
+      "medium": "Moyenne (6 mois)",
+      "long": "Longue (12 mois)"
+    },
+    "constraints": {
+      "description": "Sélectionne les zones sensibles ou blessées à protéger :"
+    },
+    "constraint": {
+      "GENOUX": "Genoux",
+      "CHEVILLES": "Chevilles",
+      "DOS": "Dos",
+      "EPAULES": "Épaules"
+    }
+  },
+  "admin": {
+    "subtitle": "Administration",
+    "title": "Panel Admin",
+    "loadError": "Impossible de charger les données. Vérifiez votre connexion.",
+    "actionError": "L'opération a échoué. Réessayez.",
+    "pendingTitle": "Demandes de coachs en attente",
+    "approvedTitle": "Coachs validés",
+    "noPending": "Aucune demande en attente.",
+    "noApproved": "Aucun coach validé pour le moment.",
+    "approve": "Valider",
+    "reject": "Refuser",
+    "deleteCoach": "Supprimer",
+    "deleteExercise": "Supprimer",
+    "confirmReject": "Êtes-vous sûr de vouloir refuser ce coach ? Son compte sera supprimé.",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce coach ?",
+    "confirmDeleteExercise": "Êtes-vous sûr de vouloir supprimer cet exercice ? Il sera retiré de tous les programmes.",
+    "table": {
+      "name": "Nom",
+      "email": "Email",
+      "exercises": "Exercices créés",
+      "actions": "Actions"
+    },
+    "contests": {
+      "title": "Gestion des concours",
+      "none": "Aucun concours créé.",
+      "draw": "Lancer le tirage",
+      "drawn": "Tirage effectué",
+      "winner": "Gagnant : {{name}}",
+      "confirmDraw": "Confirmer le tirage au sort ? Cette action est irréversible.",
+      "drawDone": "✅ Tirage effectué ! Gagnant : {{name}}",
+      "alreadyDrawn": "Le tirage a déjà été effectué pour ce concours.",
+      "noEntries": "Aucun participant inscrit à ce concours.",
+      "error": "Une erreur est survenue lors du tirage.",
+      "create": "Créer un concours",
+      "cancelCreate": "Annuler",
+      "createTitle": "Nouveau concours",
+      "createError": "Erreur lors de la création du concours. Réessayez.",
+      "form": {
+        "titre": "Titre du concours",
+        "description": "Description",
+        "recompense": "Récompense (ex: Réduction Adidas 50%)",
+        "levelRequis": "Niveau requis",
+        "dateLimite": "Date de clôture",
+        "submit": "Créer le concours"
+      }
+    }
+  },
+  "coach": {
+    "createExercise": "Créer un exercice",
+    "editExercise": "Modifier",
+    "createdBy": "Créé par {{name}}",
+    "pendingApproval": "Votre compte coach est en attente de validation par un administrateur.",
+    "exerciseForm": {
+      "back": "Retour aux exercices",
+      "titleCreate": "Créer un exercice",
+      "titleEdit": "Modifier l'exercice",
+      "warning": "Un exercice créé ne peut être supprimé que par un administrateur. Vous pourrez le modifier par la suite.",
+      "sport": "Sport",
+      "name": "Nom de l'exercice",
+      "description": "Description détaillée",
+      "duration": "Durée (min)",
+      "series": "Séries",
+      "reps": "Répétitions / Temps",
+      "intensity": "Intensité",
+      "intensityLevel": {
+        "FAIBLE": "Faible",
+        "MOYENNE": "Moyenne",
+        "ELEVEE": "Élevée"
+      },
+      "roles": "Types de joueur",
+      "equipment": "Matériel nécessaire",
+      "goals": "Objectifs",
+      "constraints": "Contraintes physiques",
+      "image": "Image (Optionnel)",
+      "submitCreate": "Créer l'exercice",
+      "submitEdit": "Enregistrer les modifications",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "loadError": "Impossible de charger les données. Vérifiez votre connexion."
+    }
+  },
+  "program": {
+    "subtitle": "Mon programme",
+    "title": "Programme personnalisé",
+    "createdOn": "Créé le",
+    "durationWeeks": "{{count}} semaines",
+    "sessionsCount": "Séances / sem.",
+    "exercisesCount": "Exercices / sem.",
+    "totalMinutes": "Minutes totales / sem.",
+    "session": "Séance",
+    "exercises": "exercices",
+    "series": "séries",
+    "startSession": "Démarrer la séance",
+    "sessionDone": "Séance terminée",
+    "empty": {
+      "title": "Aucun programme",
+      "description": "Remplis le questionnaire pour générer ton programme d'entraînement personnalisé.",
+      "cta": "Créer mon programme"
+    },
+    "feedback": {
+      "title": "Améliorer mon programme",
+      "subtitle": "Dis à l'IA ce que tu veux changer",
+      "placeholder": "Ex : j'ai mal au genou, enlève les squats. Ou : je veux plus de cardio...",
+      "send": "Mettre à jour le programme",
+      "sending": "Analyse en cours...",
+      "success": "Programme mis à jour !",
+      "error": "Une erreur est survenue, réessaie.",
+      "micStart": "Dicter le feedback",
+      "micStop": "Arrêter"
+    }
+  },
+  "landing": {
+    "hero": {
+      "title1": "Votre coach sportif,",
+      "title2": "propulsé par l'IA.",
+      "subtitle": "Des programmes sur mesure adaptés à votre sport, votre poste et votre niveau. Progressez comme jamais.",
+      "cta": "Commencer gratuitement",
+      "login": "J'ai déjà un compte"
+    },
+    "proof": {
+      "ai": "Coach intelligent",
+      "personalized": "Personnalisé",
+      "available": "Disponible"
+    },
+    "features": {
+      "label": "Fonctionnalités",
+      "title": "Tout ce qu'il vous faut",
+      "ai": {
+        "title": "Coaching IA",
+        "desc": "Un coach vocal intelligent qui vous guide, corrige et motive à chaque exercice."
+      },
+      "personalized": {
+        "title": "100% personnalisé",
+        "desc": "Programmes adaptés à votre sport, poste, niveau, matériel et objectifs."
+      },
+      "progress": {
+        "title": "Suivi de progression",
+        "desc": "Tests physiques, historique détaillé et visualisation de votre évolution."
+      },
+      "voice": {
+        "title": "Accompagnement vocal",
+        "desc": "Des consignes claires et des encouragements pendant toute la séance."
+      },
+      "safe": {
+        "title": "Sécurité d'abord",
+        "desc": "Exercices validés par des coachs. Adaptation automatique en cas de douleur."
+      },
+      "compete": {
+        "title": "Compétition saine",
+        "desc": "Gagnez de l'XP, montez en niveau et affrontez des profils similaires."
+      }
+    },
+    "steps": {
+      "label": "Comment ça marche",
+      "title": "En 4 étapes simples",
+      "s1": {
+        "title": "Créez votre profil",
+        "desc": "Sport, poste, niveau, objectifs… On apprend à vous connaître."
+      },
+      "s2": {
+        "title": "Passez les tests",
+        "desc": "Évaluez votre mobilité, stabilité et amplitude pour une base solide."
+      },
+      "s3": {
+        "title": "Recevez votre programme",
+        "desc": "L'IA génère des séances personnalisées, validées par des coachs."
+      },
+      "s4": {
+        "title": "Progressez chaque jour",
+        "desc": "Le programme s'adapte à vos retours et à votre évolution."
+      }
+    },
+    "cta": {
+      "title": "Prêt à passer au niveau supérieur ?",
+      "subtitle": "Rejoignez Level Up et transformez votre entraînement avec l'intelligence artificielle.",
+      "button": "Créer mon compte"
+    },
+    "footer": {
+      "rights": "Tous droits réservés"
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Oups ! La page que vous cherchez n'existe pas ou a été déplacée.",
+    "cta": "Retour à l'accueil"
+  },
+  "legal": {
+    "back": "Retour",
+    "termsLink": "Conditions d'utilisation",
+    "privacyLink": "Politique de confidentialité",
+    "contactLink": "Nous contacter",
+    "homeLink": "Accueil"
+  },
+  "terms": {
+    "title": "Conditions Générales d'Utilisation",
+    "lastUpdated": "Dernière mise à jour : {{date}}",
+    "updateDate": "11 mars 2026",
+    "preamble": "Les présentes Conditions Générales d'Utilisation (ci-après \"CGU\") régissent l'accès et l'utilisation de l'application Level Up (ci-après \"l'Application\"), éditée par Level Up SAS. En accédant à l'Application, vous acceptez sans réserve les présentes CGU.",
+    "sections": {
+      "object": {
+        "title": "Objet de l'Application",
+        "content": "Level Up est une application de coaching sportif personnalisé utilisant l'intelligence artificielle. Elle propose des programmes d'entraînement adaptés, un suivi de progression, du coaching vocal et une analyse de posture.\n\nL'Application ne se substitue en aucun cas à un avis médical. Il est recommandé de consulter un professionnel de santé avant de commencer tout programme d'exercices."
+      },
+      "access": {
+        "title": "Accès au service",
+        "content": "L'Application est accessible gratuitement dans sa version de base. Une offre Premium est disponible par abonnement mensuel.\n\nLevel Up se réserve le droit de modifier, suspendre ou interrompre tout ou partie du service, à tout moment et sans préavis, pour des raisons de maintenance ou d'amélioration."
+      },
+      "account": {
+        "title": "Compte utilisateur",
+        "content": "L'utilisation de l'Application nécessite la création d'un compte personnel. Vous vous engagez à :\n\n• Fournir des informations exactes et à jour\n• Maintenir la confidentialité de vos identifiants\n• Ne pas partager votre compte avec des tiers\n• Informer Level Up de toute utilisation non autorisée\n\nVous êtes responsable de toute activité effectuée depuis votre compte."
+      },
+      "healthData": {
+        "title": "Données de santé",
+        "content": "L'Application collecte et traite des données relatives à votre condition physique (performances, mensurations, objectifs sportifs). Ces données sont considérées comme des données de santé au sens du RGPD (article 9).\n\nLeur traitement est fondé sur votre consentement explicite, recueilli lors de l'inscription. Vous pouvez retirer ce consentement à tout moment (voir notre Politique de Confidentialité).\n\nCes données sont traitées avec un niveau de sécurité renforcé conformément aux exigences de la CNIL."
+      },
+      "usage": {
+        "title": "Règles d'utilisation",
+        "content": "Vous vous engagez à utiliser l'Application de manière loyale et conforme à sa destination. Il est interdit de :\n\n• Tenter de contourner les mesures de sécurité\n• Utiliser l'Application à des fins illicites\n• Copier, modifier ou redistribuer le contenu\n• Créer de faux comptes ou usurper une identité\n• Perturber le fonctionnement du service"
+      },
+      "ip": {
+        "title": "Propriété intellectuelle",
+        "content": "L'ensemble des éléments de l'Application (logo, design, textes, algorithmes, code source) sont la propriété exclusive de Level Up SAS et sont protégés par le droit de la propriété intellectuelle.\n\nToute reproduction, représentation ou exploitation non autorisée est strictement interdite."
+      },
+      "liability": {
+        "title": "Limitation de responsabilité",
+        "content": "Level Up met tout en œuvre pour assurer la fiabilité de l'Application. Toutefois, Level Up ne saurait être tenu responsable :\n\n• Des blessures survenues lors de l'exécution des exercices\n• Des interruptions temporaires du service\n• De l'exactitude des recommandations générées par l'IA\n• Des dommages résultant d'une utilisation non conforme\n\nL'utilisation de l'Application se fait sous votre entière responsabilité."
+      },
+      "termination": {
+        "title": "Résiliation",
+        "content": "Vous pouvez supprimer votre compte à tout moment depuis les paramètres de l'Application.\n\nLevel Up se réserve le droit de suspendre ou supprimer un compte en cas de violation des présentes CGU, sans préavis ni indemnité."
+      },
+      "modifications": {
+        "title": "Modifications des CGU",
+        "content": "Level Up se réserve le droit de modifier les présentes CGU. Les utilisateurs seront informés de toute modification substantielle. La poursuite de l'utilisation de l'Application après notification vaut acceptation des CGU modifiées."
+      },
+      "law": {
+        "title": "Droit applicable",
+        "content": "Les présentes CGU sont régies par le droit français. En cas de litige, et après tentative de résolution amiable, les tribunaux compétents seront ceux du ressort du siège social de Level Up SAS."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Level Up SAS\nEmail : contact@app-levelup.fr\nSiège social : Paris, France"
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : {{date}}",
+    "updateDate": "11 mars 2026",
+    "preamble": "La protection de vos données personnelles est une priorité pour Level Up. La présente politique décrit comment nous collectons, utilisons et protégeons vos données conformément au Règlement Général sur la Protection des Données (RGPD - UE 2016/679) et à la Loi Informatique et Libertés.",
+    "rgpdBadge": "Conforme au Règlement Européen sur la Protection des Données",
+    "sections": {
+      "controller": {
+        "title": "Responsable du traitement",
+        "content": "Le responsable du traitement de vos données est :\n\nLevel Up SAS\nSiège social : Paris, France\nEmail : contact@app-levelup.fr"
+      },
+      "dataCollected": {
+        "title": "Données collectées",
+        "content": "Nous collectons les catégories de données suivantes :\n\n• Données d'identification : prénom, nom, adresse email\n• Données de connexion : mot de passe (chiffré), logs de connexion\n• Données de profil sportif : sport pratiqué, niveau, objectifs\n• Données de santé : performances physiques, tests de mobilité/stabilité/amplitude, mensurations, retours post-séance\n• Données d'usage : pages visitées, fonctionnalités utilisées"
+      },
+      "healthData": {
+        "title": "Données de santé (catégorie particulière)",
+        "content": "Conformément à l'article 9 du RGPD, les données relatives à votre condition physique sont des données de catégorie particulière nécessitant un consentement explicite.\n\nCes données incluent :\n• Résultats de tests physiques (mobilité, stabilité, amplitude)\n• Performances sportives et évolution\n• Retours subjectifs post-séance (douleur, fatigue, difficulté)\n\nBase légale : votre consentement explicite (article 9.2.a du RGPD), recueilli lors de l'inscription via une case à cocher dédiée.\n\nVous pouvez retirer ce consentement à tout moment. Le retrait n'affecte pas la licéité du traitement effectué avant le retrait."
+      },
+      "legalBasis": {
+        "title": "Bases légales des traitements",
+        "content": "Selon les finalités, nos traitements reposent sur :\n\n• Consentement explicite : données de santé, cookies non essentiels\n• Exécution du contrat : gestion du compte, fourniture du service\n• Intérêt légitime : amélioration du service, sécurité\n• Obligation légale : facturation, conservation légale"
+      },
+      "purposes": {
+        "title": "Finalités du traitement",
+        "content": "Vos données sont utilisées pour :\n\n• Créer et gérer votre compte utilisateur\n• Générer des programmes d'entraînement personnalisés via l'IA\n• Suivre votre progression et adapter les recommandations\n• Fournir le service de coaching vocal\n• Assurer la sécurité et le bon fonctionnement de l'Application\n• Améliorer nos algorithmes et la qualité du service\n\nVos données ne sont jamais utilisées à des fins de prospection commerciale par des tiers."
+      },
+      "retention": {
+        "title": "Durée de conservation",
+        "content": "• Données du compte : conservées pendant la durée de votre inscription, puis supprimées sous 30 jours après suppression du compte\n• Données de santé : conservées pendant la durée de votre inscription, supprimées immédiatement à la suppression du compte ou au retrait du consentement\n• Logs de connexion : 12 mois (obligation légale)\n• Données de facturation : 10 ans (obligation comptable)"
+      },
+      "sharing": {
+        "title": "Partage des données",
+        "content": "Vos données personnelles ne sont jamais vendues.\n\nElles peuvent être partagées avec :\n• Nos sous-traitants techniques (hébergement, infrastructure) dans le cadre de contrats conformes au RGPD\n• Les autorités compétentes en cas d'obligation légale\n\nTous nos sous-traitants sont situés dans l'Union Européenne ou dans des pays assurant un niveau de protection adéquat."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "content": "Conformément au RGPD, vous disposez des droits suivants :\n\n• Droit d'accès : obtenir une copie de vos données\n• Droit de rectification : corriger vos données inexactes\n• Droit à l'effacement : demander la suppression de vos données\n• Droit à la portabilité : recevoir vos données dans un format structuré\n• Droit d'opposition : vous opposer à certains traitements\n• Droit à la limitation : limiter le traitement de vos données\n• Droit de retrait du consentement : à tout moment pour les données de santé\n\nPour exercer vos droits, contactez notre DPO à l'adresse : contact@app-levelup.fr\nDélai de réponse : 30 jours maximum."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "L'Application utilise uniquement des cookies techniques essentiels au fonctionnement du service (authentification, préférences de langue).\n\nAucun cookie publicitaire ou de traçage n'est utilisé."
+      },
+      "security": {
+        "title": "Sécurité",
+        "content": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données :\n\n• Chiffrement des mots de passe (bcrypt)\n• Communications chiffrées (HTTPS/TLS)\n• Accès restreint aux données de santé\n• Sauvegardes régulières et sécurisées\n• Tests de sécurité réguliers"
+      },
+      "minors": {
+        "title": "Mineurs",
+        "content": "L'Application s'adresse aux personnes de 16 ans et plus. Pour les mineurs de moins de 16 ans, le consentement du représentant légal est requis conformément à l'article 8 du RGPD."
+      },
+      "changes": {
+        "title": "Modifications",
+        "content": "Cette politique peut être mise à jour. En cas de modification substantielle, vous serez informé via l'Application ou par email. La date de dernière mise à jour est indiquée en haut de ce document."
+      }
+    },
+    "dpo": {
+      "title": "Délégué à la Protection des Données (DPO)",
+      "content": "Pour toute question relative à la protection de vos données :\n\nDPO Level Up\nEmail : contact@app-levelup.fr\nAdresse : Level Up SAS, Paris, France\n\nNous nous engageons à répondre à toute demande dans un délai de 30 jours."
+    },
+    "cnil": {
+      "title": "Réclamation auprès de la CNIL",
+      "content": "Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous avez le droit d'introduire une réclamation auprès de la CNIL :\n\nCommission Nationale de l'Informatique et des Libertés\n3 Place de Fontenoy, TSA 80715\n75334 Paris Cedex 07\nwww.cnil.fr"
+    }
+  },
+  "forgotPassword": {
+    "title": "Mot de passe oublié",
+    "description": "Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "email": "Adresse email",
+    "submit": "Envoyer le lien",
+    "notFound": "Aucun compte n'est inscrit avec cette adresse email.",
+    "emailError": "L'envoi de l'email a échoué. Veuillez réessayer.",
+    "sentTitle": "Email envoyé !",
+    "sentDescription": "Un email de réinitialisation a été envoyé à {{email}}.",
+    "sentHint": "Pensez à vérifier vos spams si vous ne trouvez pas l'email.",
+    "backToLogin": "Retour à la connexion",
+    "noAccount": "Pas encore de compte ?",
+    "signUpLink": "S'inscrire"
+  },
+  "resetPassword": {
+    "title": "Nouveau mot de passe",
+    "description": "Choisissez un nouveau mot de passe pour votre compte Level Up.",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "submit": "Réinitialiser",
+    "error": "Le mot de passe doit contenir au moins 6 caractères.",
+    "mismatch": "Les mots de passe ne correspondent pas.",
+    "successTitle": "Mot de passe modifié !",
+    "successDescription": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter.",
+    "goToLogin": "Se connecter",
+    "invalidTitle": "Lien invalide",
+    "invalidDescription": "Ce lien de réinitialisation est invalide. Veuillez effectuer une nouvelle demande.",
+    "invalid_tokenTitle": "Lien invalide",
+    "invalid_tokenDescription": "Ce lien de réinitialisation n'est pas reconnu. Veuillez effectuer une nouvelle demande.",
+    "token_expiredTitle": "Lien expiré",
+    "token_expiredDescription": "Ce lien a expiré (validité de 30 minutes). Veuillez effectuer une nouvelle demande.",
+    "token_usedTitle": "Lien déjà utilisé",
+    "token_usedDescription": "Ce lien a déjà été utilisé. Veuillez effectuer une nouvelle demande si nécessaire.",
+    "requestNew": "Nouvelle demande"
+  },
+  "verifyEmail": {
+    "pendingTitle": "Vérifiez votre email",
+    "pendingDescription": "Un email de vérification a été envoyé à votre adresse. Cliquez sur le lien pour activer votre compte.",
+    "pendingHint": "Pensez à vérifier vos spams si vous ne trouvez pas l'email.",
+    "backToLogin": "Retour à la connexion",
+    "verifying": "Vérification en cours...",
+    "successTitle": "Email vérifié !",
+    "successDescription": "Votre adresse email a été confirmée avec succès. Vous pouvez maintenant vous connecter.",
+    "goToLogin": "Se connecter",
+    "expiredTitle": "Lien expiré",
+    "expiredDescription": "Ce lien de vérification a expiré (validité de 24 heures). Veuillez vous réinscrire.",
+    "alreadyVerifiedTitle": "Email déjà vérifié",
+    "alreadyVerifiedDescription": "Votre adresse email est déjà vérifiée. Vous pouvez vous connecter.",
+    "invalidTitle": "Lien invalide",
+    "invalidDescription": "Ce lien de vérification est invalide. Veuillez vous réinscrire ou contacter le support.",
+    "requestNew": "S'inscrire à nouveau"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "description": "Une question, un bug ou une suggestion de sport ? Écrivez-nous !",
+    "email": "Adresse email",
+    "name": "Prénom",
+    "namePlaceholder": "Votre prénom",
+    "subject": "Sujet",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre demande...",
+    "submit": "Envoyer",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "sentTitle": "Message envoyé !",
+    "sentDescription": "Nous avons bien reçu votre message. Un email de confirmation a été envoyé à {{email}}.",
+    "sentHint": "Notre équipe vous répondra dans les plus brefs délais.",
+    "backHome": "Retour à l'accueil",
+    "back": "Retour",
+    "subjects": {
+      "sport": "Suggérer un sport",
+      "bug": "Signaler un bug",
+      "question": "Poser une question",
+      "other": "Autre"
+    }
+  },
+  "contests": {
+    "title": "Concours",
+    "subtitle": "Gagnez des récompenses",
+    "yourLevel": "Niveau {{level}}",
+    "xpInfo": "{{xp}} XP accumulés",
+    "none": "Aucun concours disponible pour le moment.",
+    "levelRequired": "Niveau {{level}} requis",
+    "deadline": "Clôture le {{date}}",
+    "closed": "Concours clôturé",
+    "winner": "🏆 Gagnant : {{name}}",
+    "lockHint": "Atteignez le niveau {{level}} pour participer",
+    "enter": "S'inscrire au concours",
+    "withdraw": "Se désinscrire",
+    "loading": "En cours...",
+    "registered": "✅ Inscription confirmée ! Un email de confirmation vous a été envoyé.",
+    "withdrawn": "Désinscription effectuée.",
+    "alreadyRegistered": "Vous êtes déjà inscrit à ce concours.",
+    "levelInsufficient": "Votre niveau est insuffisant pour participer à ce concours.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "loadError": "Impossible de charger les concours. Vérifiez votre connexion."
+  },
+  "progression": {
+    "subtitle": "Suivi",
+    "title": "Ma progression",
+    "level": {
+      "title": "Niveau {{level}}",
+      "nextLevel": "{{xp}} XP pour le niveau suivant"
+    },
+    "completion": "complété",
+    "sessionsCompleted": "séances effectuées",
+    "totalTime": "Temps total d'entraînement",
+    "weeklyGoal": "Objectif cette semaine",
+    "streak": "Semaines consécutives",
+    "programWeeks": "Semaines de programme",
+    "lastSession": {
+      "label": "Dernière séance effectuée",
+      "session": "Séance",
+      "exercises": "exercices"
+    },
+    "noSessionYet": "Tu n'as pas encore terminé de séance. Lance-toi !",
+    "noProgram": {
+      "description": "Tu n'as pas encore de programme. Remplis le questionnaire pour commencer !",
+      "cta": "Créer mon programme"
+    }
+  }
+}
