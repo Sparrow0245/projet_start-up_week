@@ -1,0 +1,120 @@
+services:
+
+  traefik:
+    image: traefik:v2.10
+    container_name: traefik
+
+    command:
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.network=app-network
+
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+
+      # Let’s Encrypt ACME resolver
+      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.email=ces.marchal@gmail.com
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+
+    networks:
+      - app-network
+
+    restart: unless-stopped
+
+
+  frontend:
+    image: europe-west9-docker.pkg.dev/levelup-startupweek/levelup-deploy/app-frontend:latest
+    container_name: app-frontend
+
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.frontend.rule=Host(`app-levelup.fr`)
+      - traefik.http.routers.frontend.entrypoints=websecure
+      - traefik.http.routers.frontend.tls=true
+      - traefik.http.routers.frontend.tls.certresolver=myresolver
+      - traefik.http.services.frontend.loadbalancer.server.port=80
+
+    networks:
+      - app-network
+
+    restart: unless-stopped
+
+
+  backend:
+    image: europe-west9-docker.pkg.dev/levelup-startupweek/levelup-deploy/app-backend:latest
+    container_name: app-backend
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/ma_base
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: monpasswordsolide
+      SPRING_PROFILES_ACTIVE: prod
+      BREVO_API_KEY: ${BREVO_API_KEY}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      FRONTEND_URL: https://app-levelup.fr
+
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.backend.rule=Host(`app-levelup.fr`) && PathPrefix(`/api`)
+      - traefik.http.routers.backend.entrypoints=websecure
+      - traefik.http.routers.backend.tls=true
+      - traefik.http.routers.backend.tls.certresolver=myresolver
+      - traefik.http.services.backend.loadbalancer.server.port=8080
+    networks:
+      - app-network
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+  db:
+    image: postgres:16
+    container_name: app-postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: monpasswordsolide
+      POSTGRES_DB: ma_base
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      #- /opt/levelup/postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - app-network
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+    restart: unless-stopped
+
+
+volumes:
+  postgres_data:
+
+
+networks:
+  app-network:
+    driver: bridge

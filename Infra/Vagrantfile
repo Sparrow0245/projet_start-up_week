@@ -1,0 +1,71 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/bookworm64"
+
+  config.vm.define "kube" do |kube|
+    kube.vm.hostname = "kube"
+    kube.vm.network "private_network", ip: "192.168.56.10"
+    kube.vm.provider "virtualbox" do |vb|
+       vb.memory = "8192"
+    end
+
+    config.vm.network "forwarded_port", guest: 5173, host: 5173
+    config.vm.network "forwarded_port", guest: 5433, host: 5433
+    config.vm.network "forwarded_port", guest: 8080, host: 8080
+
+    
+    kube.vm.synced_folder "../", "/mnt/website"
+    kube.vm.provision "shell", inline: <<-SHELL
+      export DEBIAN_FRONTEND=noninteractive
+      sudo apt-get update && sudo apt-get upgrade -y
+      sudo apt-get install -y curl ca-certificates apt-transport-https ca-certificates gnupg postgresql-client
+      # Docker
+      sudo install -m 0755 -d /etc/apt/keyrings
+      sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+      sudo chmod a+r /etc/apt/keyrings/docker.asc
+      sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/debian
+Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+      sudo apt-get update
+      sudo apt-get install -y docker-compose docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#      # Minikube
+#      curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+#      sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+#      # Kubectl
+#      curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.34/deb/Release.key | sudo gpg --no-tty --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+#      sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+#      echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.34/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+#      sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list
+#      
+#      # OpenTofu
+#      curl -fsSL https://get.opentofu.org/opentofu.gpg | tee /etc/apt/keyrings/opentofu.gpg >/dev/null
+#      curl -fsSL https://packages.opentofu.org/opentofu/tofu/gpgkey | gpg --no-tty --batch --dearmor -o /etc/apt/keyrings/opentofu-repo.gpg >/dev/null
+#      chmod a+r /etc/apt/keyrings/opentofu.gpg /etc/apt/keyrings/opentofu-repo.gpg
+#      echo \
+#        "deb [signed-by=/etc/apt/keyrings/opentofu.gpg,/etc/apt/keyrings/opentofu-repo.gpg] https://packages.opentofu.org/opentofu/tofu/any/ any main
+#        deb-src [signed-by=/etc/apt/keyrings/opentofu.gpg,/etc/apt/keyrings/opentofu-repo.gpg] https://packages.opentofu.org/opentofu/tofu/any/ any main" | \
+#      sudo tee /etc/apt/sources.list.d/opentofu.list > /dev/null
+#      sudo chmod a+r /etc/apt/sources.list.d/opentofu.list
+#
+#      # Helm pour les paquets Kubernetes
+#      curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+#      echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+#
+#      sudo apt-get update
+#      sudo apt-get install -y kubectl tofu helm
+
+      sudo usermod -aG docker vagrant
+      sudo echo "127.0.0.1   app.local api.local traefik.local" >> /etc/hosts
+      cd /mnt/website
+      cp -f /vagrant/docker-compose-dev.yml ./docker-compose.yml
+      docker-compose up --build 
+    SHELL
+  end
+end

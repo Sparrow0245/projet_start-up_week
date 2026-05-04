@@ -1,0 +1,66 @@
+services:
+
+  frontend:
+    build:
+      context: ./front-js
+      dockerfile: ./Dockerfile.dev
+    container_name: app-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./front-js:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+      - VITE_API_URL=http://localhost:8080/api
+      - VITE_FRONTEND_URL=http://localhost:5173
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+
+  backend:
+    image: europe-west9-docker.pkg.dev/levelup-startupweek/levelup-deploy/app-backend:latest
+    container_name: app-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/ma_base
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=monpasswordsolide
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      # Optionnel : pour voir les requêtes SQL
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL=true
+      - SPRING_PROFILES_ACTIVE=dev
+      - BREVO_API_KEY=${BREVO_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+
+  db:
+    image: postgres:16
+    container_name: app-postgres
+    restart: unless-stopped
+    ports:
+      - "5433:5432"   # 5433 sur l'hôte pour ne pas bloquer un postgres local
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: monpasswordsolide
+      POSTGRES_DB: ma_base
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+volumes:
+  postgres_data:
